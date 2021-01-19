@@ -1,10 +1,12 @@
 import sys
-# sys.stdin = open("input.txt", "rt")
+sys.stdin = open("input.txt", "rt")
 
 N = int(input())
 a = list(map(int, input().split()))
 
-average = round(sum(a)/N)
+average = sum(a)/N
+average += 0.5
+average = int(average)
 
 min = 2147000000
 for idx, x in enumerate(a):
